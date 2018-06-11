@@ -1,0 +1,42 @@
+{
+  "name": "smart_contract_events",
+  "version": "1.0.0",
+  "description": "A BitBrackets project to listen smart contract events in a network (Rinkeby, Ropsten, Geth (private), or Mainnet).",
+  "author": "code@bitbrackets.io",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/Bitbrackets/smart_contract_events.git#readme",
+  "scripts": {
+    "dev-rinkeby": "node ./src/app.js rinkeby",
+    "dev-ropsten": "node ./src/app.js ropsten",
+    "start-prod": "forever start -al forever.log -o out.log -e err.log ./src/app.js mainnet",
+    "start": "npm run dev-rinkeby"
+  },
+  "keywords": [
+    "bitbrackets",
+    "smart contract",
+    "solidity",
+    "blockchain",
+    "web3",
+    "event"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bitbrackets/smart_contract_events.git"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-define": "^1.3.0"
+  },
+  "dependencies": {
+    "abi-decoder": "^1.1.0",
+    "dotenv": "5.0.1",
+    "forever": "^0.15.3",
+    "fs-extra": "^5.0.0",
+    "jackrabbit": "^4.3.0",
+    "mongoose": "^5.0.12",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0",
+    "solc": "^0.4.19",
+    "web3": "^1.0.0-beta.33",
+    "web3-utils": "^1.0.0-beta.33"
+  }
+}
